@@ -1,0 +1,30 @@
+* 2026-09-16 USB connection
+
+** Problem
+
+MKR WiFi 1010 received power but was not detected by Linux.
+
+** Diagnosis
+
+#+begin_src bash
+lsusb
+#+end_src
+
+The Arduino was not listed.
+
+** Cause
+
+Defective USB cable. The power connection worked, but USB data
+communication did not.
+
+** Solution
+
+Replaced the cable.
+
+#+begin_src text
+Bus 001 Device 007: ID 2341:8054 Arduino SA Arduino MKR WiFi 1010
+#+end_src
+
+** Learned
+
+Power over USB does not imply that USB data communication works.
